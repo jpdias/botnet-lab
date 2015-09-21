@@ -27,10 +27,7 @@ def ParseUserCommands(irc, messageSender, messageChannel, messageSent):
 
 def ExecCmd(cmd):
 	try :
-		if settings_channel == "#unixbots":
-			output =  subprocess.Popen(cmd.split[" "], stdout=subprocess.PIPE).communicate()[0]
-		else:
-			output =  subprocess.Popen(cmd, stdout=subprocess.PIPE).communicate()[0]
+		output =  subprocess.Popen(cmd, stdout=subprocess.PIPE,shell=True).communicate()[0]
 		irc.send ( 'PRIVMSG ' + messageChannel + ' :'+ output.replace("\r"," - ").replace("\n"," - ") +'\r\n' )
 	except :
 		output = "FAILED"
