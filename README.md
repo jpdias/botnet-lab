@@ -24,6 +24,7 @@ A botnet laboratory for learning and testing proposes.
  - Multiple Control points 
  - Detect Virtualization
  - Self Morphing (Change the bot hash over time)
+ - Auto-destructive bot
  
 ## Educational ToDo
  
