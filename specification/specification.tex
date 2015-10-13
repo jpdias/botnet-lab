@@ -63,9 +63,44 @@ With this we try to build a complete solution for the ones who are interested in
 
 \subsection{Botnet Lab Framework}
 
+With the intuit of having a real hands-on tool for testing and developing proposes we will create a botnet lab framework, a botnet tool based on the IRC communication protocol, with built-in functionalities and an easy way of expanding functionalities, in a framework way.
+
+As now we are considering a simple bot framework with following built-in features:
+
+\begin{itemize}
+	\item Keylogger (Capture and record computer users' keystroke)
+	\item Screenlogger (Take print-screens of users' desktop)
+	\item Webcam-stream capture functionalities
+	\item Spam
+	\item Distributed Denial of Service (DDoS)
+	\item Private data scrapping
+\end{itemize}
+
+In addition to this bot framework will be added an IRC server part with the needed functionalities to control bots in a Command and Control way. For now we are considering using the open-source server \textit{IRCD-Hybrid} \cite{app:ircdhybrid}.
+
+The tool will be developed having in mind the following ideas:
+\begin{itemize}
+	\item Encrypt all traffic between C\&C and Bots
+	\item Explore a pre-known exploit as a way of propagation (in some old software or tool for example)
+	\item Camouflage: make the bot run as a part of something that usually runs on the system
+	\item Using code obfuscation
+	\item Bot self-propagation (Point-Of-Distribution - Worm)
+\end{itemize}
+
+
 \subsection{Botnet Wiki}
 
-topics as history of botnets, botnet detailed structure and features, kinds of attacks and uses and, finally, research made on the topic complemented with countermeasures and existing task-forces that detect and dismantle botnets.
+In the botnet wiki, besides of the instructions/tutorials on the \textit{Botnet Lab Framework} will be added general information about botnets including topics as the following ones.
+\begin{itemize}
+	\item History of botnets;
+	\item Botnet detailed structure and features (botnet anatomy);
+	\item Kinds of attacks \& uses;
+	\item Current research;
+	\item Countermeasures;
+	\item Task-forces that detect and dismantle botnets;
+	\item Good uses of botnets.
+\end{itemize}
+
 \section{Planning}
 
 \bibliographystyle{plain}
