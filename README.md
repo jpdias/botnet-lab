@@ -35,3 +35,29 @@ A botnet laboratory for learning and testing proposes.
 	- History and impact of botnet
 	- Preventing and dectecting
 	- Operations and task-forces dedicated to botnets
+	
+#Working with [venv](https://docs.python.org/3/library/venv.html)
+
+```$ pip install virtualenv
+$ cd my_project_folder
+```
+
+###Windows Activate
+
+```./venv/Scripts/activate```
+
+###Linux Activate
+
+```./venv/bin/activate```
+
+###Install dependencies
+
+```pip install -r requirements.txt```
+
+Install manual dependencies
+
+```pip install dep/dep.whl```
+
+In venv mode afer add a new dependency  please do ```pip freeze > requirements.txt```
+
+
