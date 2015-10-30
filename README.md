@@ -38,26 +38,38 @@ A botnet laboratory for learning and testing proposes.
 	
 #Working with [venv](https://docs.python.org/3/library/venv.html)
 
-```$ pip install virtualenv
+```
+$ pip install virtualenv
 $ cd my_project_folder
 ```
 
 ###Windows Activate
 
-```./venv/Scripts/activate```
+```
+./venv/Scripts/activate
+```
 
 ###Linux Activate
 
-```./venv/bin/activate```
+```
+./venv/bin/activate
+```
 
 ###Install dependencies
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 Install manual dependencies
 
-```pip install dep/dep.whl```
+```
+pip install dep/dep.whl
+```
 
-In venv mode afer add a new dependency  please do ```pip freeze > requirements.txt```
+In venv mode afer add a new dependency  please do 
+```
+pip freeze > requirements.txt
+```
 
 
