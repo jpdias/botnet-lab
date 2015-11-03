@@ -1,6 +1,6 @@
 import subprocess
 
-def exec_cmd(cmd):
+def shell(cmd):
 	try :
 		output =  subprocess.Popen(cmd, stdout=subprocess.PIPE,shell=True).communicate()[0]
 		return output.replace("\r"," - ").replace("\n"," - ")

