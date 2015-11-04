@@ -2,6 +2,7 @@ import socket, os
 import subprocess
 import irc
 import router
+import encrypt
 
 #SETTINGS:
 if  os.name=="nt":
@@ -36,6 +37,8 @@ while True:
 				ircSession.ParseUserCommands(ircSession, messageSender, messageChannel, messageSent)
 			else:
 				output = router.distribute(messageSent)
+				#encrypt output
+				#output = encrypt(output)
 				ircSession.send ( 'PRIVMSG ' + messageChannel + ' :'+ output +'\r\n' )
 		if parseText[0] == "PING":
 			#Respond to PINGs

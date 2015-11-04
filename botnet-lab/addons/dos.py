@@ -7,7 +7,7 @@ def dos(host, port, duration, pause):
 	finish_time = datetime.datetime.now() + datetime.timedelta(minutes=int(duration))
 	while datetime.datetime.now() < finish_time:
 		attack(host,port)
-		#time.sleep(int(pause))
+		time.sleep(int(pause))
 	else:
 		return "Success"
 		
