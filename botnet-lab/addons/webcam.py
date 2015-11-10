@@ -1,10 +1,9 @@
-import base64
 import json
-import requests
 from base64 import b64encode
+import os
 import pygame
 import pygame.camera
-import os
+import requests
 
 
 def webcam():

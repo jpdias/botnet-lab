@@ -83,7 +83,6 @@ _site/
 *.ind
 *.ist
 *.lof
-*.log
 *.lot
 *.maf
 *.mtc
@@ -114,6 +113,8 @@ nohup.out
 .idea/
 # if you remove the above rule, at least ignore the following:
 botnet-lab/.idea/
+botnet-lab/.idea/vcs.xml
+botnet-lab/.idea
 # User-specific stuff:
 # .idea/workspace.xml
 # .idea/tasks.xml

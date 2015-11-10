@@ -1,4 +1,5 @@
 from Crypto.PublicKey import RSA
+import base64
 
 
 # Generate (First time)
@@ -13,5 +14,6 @@ from Crypto.PublicKey import RSA
 def decrypt(msg):
     with open('keys/priv', 'r') as content_file:
         f_priv = content_file.read()
-    keyPriv = RSA.importKey(f_priv)
-    return keyPriv.decrypt(msg)
+    keypriv = RSA.importKey(f_priv)
+    msg = base64.b64decode(msg)
+    return keypriv.decrypt(msg)
