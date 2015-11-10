@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>IRC Example Frontend</title>
+    <script type="text/javascript" src="/js/chat.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function(){ 
+          $("#chatinput").keypress(function(event) {
+            if (event.which == 13) {
+              //sends the message to the server via websocket
+              sendchat($("#chatinput").val());
+              //clears the chat input box
+              $("#chatinput").val("");
+              //keeps the main chatbox scrolled down
+              $("#chatbox").animate({scrollTop: $("#chatbox")[0].scrollHeight}, 200);
+            }
+          });
+      });
+    </script>
+  </head>
+  <body bgcolor="black">
+
+    <div class="chatbox" id="chatbox" name="chatbox" style="background-color:white; width:100%; height:95%;">
+    </div>
+    <input type="text" id="chatinput" name="chatinput" style="width: 100%;">
+  </body>
+</html>
