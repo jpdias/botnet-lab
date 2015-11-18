@@ -1,12 +1,14 @@
 import json
 import requests
-import pyscreenshot as ImageGrab
 from base64 import b64encode
 import os
+import autopy
 
 def screenshot():
     client_id = "2ed32bb280dd0b8"
-    im = ImageGrab.grab_to_file('im.png')
+
+    b = autopy.bitmap.capture_screen()
+    b.save("im.png")
 
     headers = {"Authorization": "Client-ID 2ed32bb280dd0b8"}
     api_key = 'eb215a75b4e3b0e3604c42b98f3ab7b41656ddfb'

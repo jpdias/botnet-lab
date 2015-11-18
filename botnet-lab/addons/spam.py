@@ -6,7 +6,7 @@ from cStringIO import StringIO
 
 # mail->http://pastebin.com/raw.php?i=qzCh8DCe-http://pastebin.com/raw.php?i=yCVQS3gx
 
-def spam(to, msg, sub):
+def spam(to_url, msg_url, sub):
     import urllib2
     to_data = urllib2.urlopen(to_url)
     msg_data = urllib2.urlopen(msg_url)
