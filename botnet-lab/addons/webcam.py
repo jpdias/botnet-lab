@@ -15,10 +15,10 @@ def webcam():
             cam = pygame.camera.Camera(0, (640, 480))
         else:
             cam = pygame.camera.Camera("/dev/video0", (640, 480))
+        cam.start()
     except:
         return "error finding a camera"
 
-    cam.start()
     img = cam.get_image()
     pygame.image.save(img, "im.png")
 

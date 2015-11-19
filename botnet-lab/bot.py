@@ -27,13 +27,14 @@ while True:
             messageChannel = privmsgText[2]
             messageSent = privmsgText[3].lstrip(":")
             # print "messageSender:", messageSender, "messageChannel:", messageChannel, "messageSent:", messageSent
-            if messageSent[0] == settings_commandprefix:
-                ircSession.ParseUserCommands(ircSession, messageSender, messageChannel, messageSent)
-            else:
-                output = router.distribute(messageSent)
-                # encrypt output
-                output = encrypt.encrypt(output)
-                ircSession.send('PRIVMSG ' + messageChannel + ' :' + str(output) + '\r\n')
+            if not messageSender.startswith( 'bot' ):
+                if messageSent[0] == settings_commandprefix:
+                    ircSession.ParseUserCommands(ircSession, messageSender, messageChannel, messageSent)
+                else:
+                    output = router.distribute(messageSent)
+                    # encrypt output
+                    output = encrypt.encrypt(output)
+                    ircSession.send('PRIVMSG ' + messageChannel + ' :' + str(output) + '\r\n')
         if parseText[0] == "PING":
             # Respond to PINGs
             pingSender = parseText[1].split(":")[1]
