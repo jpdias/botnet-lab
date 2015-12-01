@@ -102,6 +102,7 @@ _site/
 
 botnet-lab/venv
 botnet-lab/env
+botnet-lab/dist
 nohup.out
 
 

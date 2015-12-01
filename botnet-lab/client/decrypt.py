@@ -1,7 +1,6 @@
 from Crypto.PublicKey import RSA
 import base64
 
-
 # Generate (First time)
 # f_priv = open('keys/priv','w')
 #

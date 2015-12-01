@@ -1,6 +1,5 @@
 import addons
 
-
 def distribute(messageSent):
     if messageSent.find('cmd') != -1:
         # cmd->shell_command

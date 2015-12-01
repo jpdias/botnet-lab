@@ -13,16 +13,22 @@ def screenshot():
     headers = {"Authorization": "Client-ID 2ed32bb280dd0b8"}
     api_key = 'eb215a75b4e3b0e3604c42b98f3ab7b41656ddfb'
     url = "https://api.imgur.com/3/upload.json"
-    j1 = requests.post(
-        url,
-        headers=headers,
-        data={
-            'key': api_key,
-            'image': b64encode(open('im.png', 'rb').read()),
-            'type': 'base64',
-            'name': 'im.png',
-            'title': 'screen'
-        }
-    )
+    try:
+        j1 = requests.post(
+            url,
+            headers=headers,
+            data={
+                'key': api_key,
+                'image': b64encode(open('im.png', 'rb').read()),
+                'type': 'base64',
+                'name': 'im.png',
+                'title': 'screen'
+            }, verify=False
+        )
+    except:
+        return "Failed to upload."
     os.remove('im.png')
-    return json.loads(j1.text)["data"]["link"]
+    try:
+        return json.loads(j1.text)["data"]["link"]
+    except:
+        return "Failed to retrieve response."

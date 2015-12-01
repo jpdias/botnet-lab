@@ -6,7 +6,6 @@ var sendchat = (function() {
 	window.addEventListener("unload", connection.close);
 
 	connection.onopen = function(){
-		//TODO: query server for existing users to build the user list
 		console.log("Connection opened!");
 	};
 
@@ -24,8 +23,7 @@ var sendchat = (function() {
 			switch ( message.type ){
 				case "join":
 					$("#chatbox")
-						.append("<span class=\"chat_notice\">"+message
-														.user+" has joined the room.</span><br />");
+						.append("<span class=\"chat_notice\">" + message.user + " has joined the room.</span><br />");
 					$("#userlist")
 						.append("<span id=\""+message.user+"_list\">"+message.user+"</span><br />");
 					break;

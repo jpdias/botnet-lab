@@ -1,5 +1,5 @@
 import time
-import socket, os
+import socket
 
 
 def connect(settings_server, settings_port, settings_botnick, settings_botpass, settings_channel, settings_owner):
@@ -14,6 +14,6 @@ def connect(settings_server, settings_port, settings_botnick, settings_botpass, 
         # irc.send("PRIVMSG " + channel + " :Hi\r\n")
         return irc
     except:
-        print "Fail to connect"
-        time.sleep(100)
+        #print "Fail to connect"
+        time.sleep(10)
         connect(settings_server, settings_port, settings_botnick, settings_botpass, settings_channel, settings_owner)
