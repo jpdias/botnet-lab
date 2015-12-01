@@ -4,6 +4,7 @@ import decrypt
 import requests
 import json
 
+
 class ChatBridge(irc.IRCClient):
     nickname = "mastermind"
     debug = False
@@ -51,14 +52,17 @@ class ChatBridge(irc.IRCClient):
 
     def userlist(self):
         baseUrl = "http://freegeoip.net/json/"
+
+        baseMap = """https://maps.googleapis.com/maps/api/staticmap?center=Portugal&zoom=2&size=1300x1300"""
         for host in self.HostList:
-            j1 = requests.get(baseUrl+host)
-            resp =  json.loads(j1.text)
-            resp["latitude"]
-            resp["longitude"]
+            j1 = requests.get(baseUrl + host)
+            resp = json.loads(j1.text)
+            baseMap += "&markers=color:red%7Clabel:S%7C" + str(resp["latitude"]) + "," + str(resp["longitude"])
+
+        baseMap += "&key=AIzaSyBAsLov4ueoDpIddLVkwdeUprbLdUgmJtc"
         self.factory.websocket.write_message({"type": "chat",
                                               "user": "WHO",
-                                              "message": str(self.HostList)})
+                                              "message": str(baseMap)})
 
     def irc_RPL_NAMREPLY(self, *nargs):
         self.factory.websocket.write_message({"type": "chat",
@@ -89,6 +93,7 @@ class ChatBridge(irc.IRCClient):
     def irc_RPL_ENDOFWHO(self, *nargs):
         "Called when WHO output is complete"
         print 'WHO COMPLETE'
+
 
 class ChatBridgeFactory(protocol.ClientFactory):
     bridge = None

@@ -12,7 +12,7 @@ tornado.platform.twisted.install()
 from wwwirc import ChatBridgeFactory
 from twisted.internet import reactor
 
-define("port", default=8888, help="run on the given port", type=int)
+define("port", default=4000, help="run on the given port", type=int)
 
 
 class Application(tornado.web.Application):
