@@ -66,8 +66,27 @@ For example wiht `pygame==1.9.2a0` for Windows 64bit:
 In Linux there is no generic way of installing all the missing packages. For that we will go throught everyone that may cause problems and present a workaround.
 
 - *pygame*:
-For installing `pygame` you can use this shell script: [install_pygame.sh](https://gist.github.com/brousch/6395214#file-install_pygame-sh).
+For installing `pygame` you can use the shell script below.
 Remember to do this with the `venv` activated.
+
+{% highlight bash %}
+#!/bin/sh
+BASE_PATH=`pwd`
+sudo apt-get build-dep python-pygame
+sudo apt-get install python-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsdl1.2-dev libsmpeg-dev python-numpy subversion libportmidi-dev ffmpeg libswscale-dev libavformat-dev libavcodec-dev libv4l-dev
+cd /usr/include/linux
+sudo ln -s ../libv4l1-videodev.h videodev.h
+cd $BASE_PATH
+wget http://www.pygame.org/ftp/pygame-1.9.1release.tar.gz
+tar -xzf pygame-1.9.1release.tar.gz
+cd pygame-1.9.1release
+python config.py
+sudo python setup.py install
+cd $BASE_PATH
+rm pygame-1.9.1release.tar.gz
+sudo rm -rf pygame-1.9.1release
+ln -s /usr/local/lib/python2.7/dist-packages/pygame venv/lib/python2.7/site-packages/pygame
+{% endhighlight %}
 
 - *python-xlib*: `sudo pip install svn+https://svn.code.sf.net/p/python-xlib/code/trunk/`
 	- You can have to install svn  with `sudo apt-get install svn`
