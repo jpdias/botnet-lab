@@ -1,8 +1,8 @@
 import socket
+
+import encrypt
 import irc
 import router
-import encrypt
-
 
 settings_server = "jpdias.noip.me"
 settings_port = 1723
