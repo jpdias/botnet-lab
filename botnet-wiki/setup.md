@@ -61,6 +61,9 @@ To make it install on Windows simple go to the [Unofficial Windows Binaries for 
 For example wiht `pygame==1.9.2a0` for Windows 64bit:
 - `pip install <path_to_download_folder>/pygame‑1.9.2a0‑cp33‑none‑win_amd64.whl`
 
+- *win32api - pywin32* 
+	- `pip install pypiwin32`
+
 **Linux**
 
 In Linux there is no generic way of installing all the missing packages. For that we will go throught everyone that may cause problems and present a workaround.

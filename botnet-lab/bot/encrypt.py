@@ -4,7 +4,7 @@ import base64
 
 
 def encrypt(msg):
-    with open('client/keys/pub', 'r') as content_file:
+    with open('keys/pub', 'r') as content_file:
         f_pub = content_file.read()
     #url_public_key = urllib2.urlopen('http://pastebin.com/raw.php?i=UcxTLbqY').read()
     keyPub = RSA.importKey(f_pub)

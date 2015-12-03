@@ -7,6 +7,7 @@ import subprocess
 
 def screenshot():
     client_id = "2ed32bb280dd0b8"
+    output = ""
     try:
         if os.name != "nt":
             p = subprocess.Popen(["echo", "$DISPLAY"], stdout=subprocess.PIPE)
