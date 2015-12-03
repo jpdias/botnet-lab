@@ -9,6 +9,7 @@ class ChatBridge(irc.IRCClient):
     nickname = "mastermind"
     debug = False
     websocket = None
+    password = "botnetpassword"
 
     HostList = []
 
@@ -106,7 +107,6 @@ class ChatBridgeFactory(protocol.ClientFactory):
         p.factory = self
         self.bridge = p
         self.nickname = p.nickname
-
         return p
 
     def clientConnectionLost(self, connector, reason):
