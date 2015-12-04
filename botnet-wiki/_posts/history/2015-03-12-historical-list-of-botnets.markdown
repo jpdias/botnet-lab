@@ -8,6 +8,9 @@ categories: history
 The "boom" of the internet and the massive increase of the use of the e-mail made the conditions ideal for the appearance of botnets. In fact, as you will see below, most of the botnets detected until today are somehow related to sending enourmous amounts of e-mails, especially spam. Be aware that the estimated number of bots presented below are just that, estimatives, because in some countries it is common that users change their IP address several times a day.
 
 
+----------
+
+
 2004
 ----
 
@@ -176,3 +179,9 @@ Est. no of bots: 300 000+
 Semalt is a botnet mainly involved mainly involved in sending spam e-mails.
 
 It visits random websites to generate referral and spies on users browsing habits.
+
+
+----------
+
+
+This list demonstrates that there has been several botnets that were able to reach a big dimension infecting thousands (or even millions) of machines. Most of the botnets presented were spam sending related but it is also noticeable that there has been an evolution and they tend to do more than just that. Also botnets have become more complex making it harder to dismantle them.
