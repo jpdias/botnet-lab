@@ -5,11 +5,12 @@ permalink: /about/
 ---
 
 
-##Team
+##Authors
 
-- Eduardo Martins
-- João Sá
-- João Pedro Dias
-- José Pedro Pinto
+- [Eduardo Martins](https://github.com/dreadmaluko/)
+- [João Sá](https://github.com/Joao-Sa/)
+- [João Pedro Dias](http://jpdias.github.io/)
+- [José Pedro Pinto](https://github.com/JPPinto/)
+
 
 [![Faculdade de Engenharia da Universidade do Porto]({{ site.url }}/img/logo-feup.png)](http://fe.up.pt/)

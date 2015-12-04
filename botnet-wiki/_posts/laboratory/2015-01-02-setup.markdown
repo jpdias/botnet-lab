@@ -3,10 +3,9 @@ layout: post
 title:  "Setup Botnet Lab"
 date:   2015-10-19 17:21:50
 categories: laboratory
+excerpt: Setup guide for botnet laboratory.
 ---
 
-
-#*Botnet Lab* setup
 
 ##Minimal requirements
 

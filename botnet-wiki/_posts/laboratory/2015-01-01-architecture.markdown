@@ -3,6 +3,7 @@ layout: post
 title:  "Botnet Lab Architecture"
 date:   2015-10-19 17:21:50
 categories: laboratory
+excerpt: Architecture and structure of the botnet laboratory.
 ---
 
 ##Summary

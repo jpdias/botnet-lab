@@ -33,6 +33,21 @@ layout: default
   {% endfor %}
 </div>
 <div class="col-md-12">
+  <h2>Botnet Countermeasures</h2>
+  {% for post in site.categories.countermeasures %}
+   <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      </div>
+      <div class="panel-body">
+        {{ post.excerpt }}
+      </div>
+    </div>
+  </div> 
+  {% endfor %}
+</div>
+<div class="col-md-12">
   <h2>Botnet Lab</h2> {% for post in site.categories.laboratory %}
   <div class="col-md-4">
     <div class="panel panel-primary">
