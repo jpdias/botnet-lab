@@ -61,6 +61,7 @@ class ChatBridge(irc.IRCClient):
             baseMap += "&markers=color:red%7Clabel:S%7C" + str(resp["latitude"]) + "," + str(resp["longitude"])
 
         baseMap += "&key=AIzaSyBAsLov4ueoDpIddLVkwdeUprbLdUgmJtc"
+        self.who('#botnet')
         self.factory.websocket.write_message({"type": "chat",
                                               "user": "WHO",
                                               "message": str(baseMap)})
