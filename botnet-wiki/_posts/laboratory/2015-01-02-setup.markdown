@@ -67,6 +67,8 @@ For example wiht `pygame==1.9.2a0` for Windows 64bit:
 
 **Linux**
 
+>You can try to use this script to setup all the dependencies and even download the project: [install.sh]({{ site.url }}/resources/install.sh)
+
 In Linux there is no generic way of installing all the missing packages. For that we will go throught everyone that may cause problems and present a workaround.
 
 - *pygame*:
@@ -92,7 +94,7 @@ sudo rm -rf pygame-1.9.1release
 ln -s /usr/local/lib/python2.7/dist-packages/pygame venv/lib/python2.7/site-packages/pygame
 {% endhighlight %}
 
-- *python-xlib*: `sudo pip install svn+https://svn.code.sf.net/p/python-xlib/code/trunk/`
+- *python-xlib*: `pip install svn+https://svn.code.sf.net/p/python-xlib/code/trunk/`
 	- You can have to install svn  with `sudo apt-get install svn`
 		
 - *autopy*: `sudo apt-get install libxtst-dev`
