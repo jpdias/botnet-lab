@@ -87,6 +87,7 @@ class ChatBridge(irc.IRCClient):
 
     def irc_RPL_WHOREPLY(self, *nargs):
         "Receive WHO reply from server"
+        self.HostList = []
         self.HostList.append(nargs[1][3])
         self.factory.websocket.write_message({"type": "chat",
                                               "user": "WHO",

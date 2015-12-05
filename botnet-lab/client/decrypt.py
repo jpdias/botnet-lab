@@ -14,5 +14,9 @@ def decrypt(msg):
     with open('keys/priv', 'r') as content_file:
         f_priv = content_file.read()
     keypriv = RSA.importKey(f_priv)
-    msg = base64.b64decode(msg)
-    return keypriv.decrypt(msg)
+    try:
+        msg = base64.b64decode(msg)
+        return keypriv.decrypt(msg)
+    except:
+        return msg
+

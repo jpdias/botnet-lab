@@ -10,11 +10,11 @@ def screenshot():
     output = ""
     try:
         if os.name != "nt":
-            p = subprocess.Popen(["echo", "$DISPLAY"], stdout=subprocess.PIPE)
+            p = subprocess.Popen(["echo $DISPLAY"], shell=True, stdout=subprocess.PIPE)
             output, err = p.communicate()
     except:
         return "Display not found"
-    if output != " " or output != "" or os.name == "nt":
+    if len(str(output).strip()) != 0 or os.name == "nt":
         b = autopy.bitmap.capture_screen()
         b.save("im.png")
     else:

