@@ -163,6 +163,14 @@ Est. no of bots: 3 000 000
 Ramnit is a computer worm affecting Windows operating system.
 
 The Ramnit botnet was dismantled by Europol and Symantec securities in 2015.
+
+**ZeroAccess** [more info: https://en.wikipedia.org/wiki/ZeroAccess_botnet]
+
+Est. no of bots: 2 000 000
+
+ZeroAccess, also known as Max++ and/or Sirefef, is a botnet mostly involved in bitcoin mining and click fraud.
+
+It uses a Trojan horse computer malware that affects Microsoft Windows operating systems and downloads other malware on an infected machine while remaining hidden by using rootkit techniques.
 	
 
 2014
@@ -185,3 +193,17 @@ It visits random websites to generate referral and spies on users browsing habit
 
 
 This list demonstrates that there has been several botnets that were able to reach a big dimension infecting thousands (or even millions) of machines. Most of the botnets presented were spam sending related but it is also noticeable that there has been an evolution and they tend to do more than just that. Also botnets have become more complex making it harder to dismantle them.
+
+
+----------
+
+
+Real-Time Tracker
+----
+
+
+----------
+
+You can use Virus Tracker's tool avaibable at https://map.virustracker.net/ to track active botnets in real-time.
+
+![Virus Tracker's Real Time Toool](http://s16.postimg.org/pie9sszlh/botnets_world_map.png)
