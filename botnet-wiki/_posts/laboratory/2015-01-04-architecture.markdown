@@ -20,6 +20,8 @@ Additionally it's used the [PasteBin Service](http://pastebin.com/) and it's "an
 
 In the second case, the Screenshot/Webcam, the bots uses the [Imgur API](https://api.imgur.com/) for storage the images and just send the URL of that images back to the *Bot Herder*.
 
+Adding to all of this, it is used the [freegeoip](https://freegeoip.net/) and [Google Static Map API](https://developers.google.com/maps/documentation/static-maps/) for getting and showing the relative world position of the controlled hosts.
+
 Also, it's used RSA encryption so the *Bot Herder* it's the only one capable of decrypt the messages sended by the bots because it's the *Private Key* owner. The bots encrypts the messages using the *Public Key* defined by the *Bot Herder*.
 
 ##Network Diagram
@@ -37,3 +39,7 @@ Also, it's used RSA encryption so the *Bot Herder* it's the only one capable of 
 ##Message Exchange Diagram on Webcam or Screenlogger Request
 
 ![Sequencial Diagram]({{ site.url }}/diagrams/sequencial_spam_diagram.png)
+
+##Host Location Call Diagram
+
+![Sequencial Diagram]({{ site.url }}/diagrams/location_diagram.png)
