@@ -170,8 +170,22 @@ Est. no of bots: 2 000 000
 
 ZeroAccess, also known as Max++ and/or Sirefef, is a botnet mostly involved in bitcoin mining and click fraud.
 
-It uses a Trojan horse computer malware that affects Microsoft Windows operating systems and downloads other malware on an infected machine while remaining hidden by using rootkit techniques.
+It uses a Trojan horse computer malware that affects Microsoft Windows operating systems and downloads other malware on an infected machine while remaining hidden by using rootkit techniques.	
 	
+2012
+----
+
+
+----------
+
+
+**Nitol ** [more info: https://en.wikipedia.org/wiki/Nitol_botnet]
+
+Est. no of bots: unknown
+
+The Nitol botnet is a botnet mostly involved in spreading malware and distributed denial-of-service attacks.
+
+The botnet is mostly prevalent in China where an estimate 85% of the infections are detected. It was found to be present on systems that came brand-new from the factory, indicating the trojan was installed somewhere during the assembly and manufacturing process.
 
 2014
 ----
@@ -193,17 +207,3 @@ It visits random websites to generate referral and spies on users browsing habit
 
 
 This list demonstrates that there has been several botnets that were able to reach a big dimension infecting thousands (or even millions) of machines. Most of the botnets presented were spam sending related but it is also noticeable that there has been an evolution and they tend to do more than just that. Also botnets have become more complex making it harder to dismantle them.
-
-
-----------
-
-
-Real-Time Tracker
-----
-
-
-----------
-
-You can use Virus Tracker's tool avaibable at https://map.virustracker.net/ to track active botnets in real-time.
-
-![Virus Tracker's Real Time Toool](http://s16.postimg.org/pie9sszlh/botnets_world_map.png)
