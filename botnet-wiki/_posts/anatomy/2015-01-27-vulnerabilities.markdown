@@ -17,7 +17,6 @@ Due to their immense size - botnets can consist of several ten thousand compromi
 Another use for botnets is stealing sensitive information or identity theft: Searching some thousands home PCs for password.txt, or sniffing their traffic, can be effective.
 The spreading mechanisms used by bots is a leading cause for "background noise" on the Internet, especially on TCP ports 445 and 135. In this context, the term spreading describes the propagation methods used by the bots. These malware scan large network ranges for new vulnerable computers and infect them, thus acting similar to a worm or virus.
 
-As listed
 
 **Vulnerability-specific ports:**
 
