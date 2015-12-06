@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Types of Bots"
-date:   2015-12-03 21:21:50
+date:   2015-01-29 21:21:50
 categories: anatomy
 ---
 
