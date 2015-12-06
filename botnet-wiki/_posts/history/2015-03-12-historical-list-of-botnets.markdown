@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Historical list of botnets"
+excerpt:  "List of the main botnets created along the history"
 date:   2015-12-03 10:00:00
 categories: history
 ---
+
 
 The "boom" of the internet and the massive increase of the use of the e-mail made the conditions ideal for the appearance of botnets. In fact, as you will see below, most of the botnets detected until today are somehow related to sending enourmous amounts of e-mails, especially spam. Be aware that the estimated number of bots presented below are just that, estimatives, because in some countries it is common that users change their IP address several times a day.
 
