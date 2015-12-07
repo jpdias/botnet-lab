@@ -52,15 +52,19 @@ class ChatBridge(irc.IRCClient):
         pass
 
     def userlist(self):
-        baseUrl = "http://freegeoip.net/json/"
-
-        baseMap = """https://maps.googleapis.com/maps/api/staticmap?center=Portugal&zoom=2&size=1300x1300"""
-        for host in self.HostList:
-            j1 = requests.get(baseUrl + host)
-            resp = json.loads(j1.text)
-            baseMap += "&markers=color:red%7Clabel:S%7C" + str(resp["latitude"]) + "," + str(resp["longitude"])
-
-        baseMap += "&key=AIzaSyBAsLov4ueoDpIddLVkwdeUprbLdUgmJtc"
+        try:
+            baseUrl = "http://freegeoip.net/json/"
+    
+            baseMap = """https://maps.googleapis.com/maps/api/staticmap?center=Portugal&zoom=2&size=1300x1300"""
+            for host in self.HostList:
+                j1 = requests.get(baseUrl + host)
+                resp = json.loads(j1.text)
+                baseMap += "&markers=color:red%7Clabel:S%7C" + str(resp["latitude"]) + "," + str(resp["longitude"])
+    
+            baseMap += "&key=AIzaSyBAsLov4ueoDpIddLVkwdeUprbLdUgmJtc"
+        except:
+            return "API not available."
+        self.HostList = []
         self.who('#botnet')
         self.factory.websocket.write_message({"type": "chat",
                                               "user": "WHO",
@@ -87,7 +91,6 @@ class ChatBridge(irc.IRCClient):
 
     def irc_RPL_WHOREPLY(self, *nargs):
         "Receive WHO reply from server"
-        self.HostList = []
         self.HostList.append(nargs[1][3])
         self.factory.websocket.write_message({"type": "chat",
                                               "user": "WHO",

