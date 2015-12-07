@@ -3,7 +3,7 @@ layout: post
 title:  "Organization"
 date:   2015-01-26 21:21:50
 categories: anatomy
-excerpt: While botnets are often named after the malware that created them, multiple botnets typically use the same malware, but are operated by different entities.[1]
+excerpt: While botnets are often named after the malware that created them, multiple botnets typically use the same malware, but are operated by different entities.
 ---
 
 A botnet's originator (known as a "bot herder" or "bot master") can control the group remotely, usually through IRC, and often for criminal purposes. Though rare, more experienced botnet operators program command protocols from scratch. These protocols include a server program, a client program for operation, and the program that embeds the client on the victim's machine.  `This server is known as the command-and-control (C&C) server.` The bots communicate over a network, using a unique encryption scheme for stealth and protection against detection or intrusion into the botnet.

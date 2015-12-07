@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Real time tracker"
-excerpt:  "Online tool to track active botnets"
+excerpt:  "Online tool to track active botnets."
 date:   2015-12-03 10:00:00
 categories: history
 ---

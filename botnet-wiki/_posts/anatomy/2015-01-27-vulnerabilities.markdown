@@ -3,6 +3,7 @@ layout: post
 title:  "Vulnerabilities"
 date:   2015-01-27 21:21:50
 categories: anatomy
+excerpt: "In computer security, a vulnerability is defined as: a weakness that allows an attacker to reduce a system's information assurance. "
 ---
 
 

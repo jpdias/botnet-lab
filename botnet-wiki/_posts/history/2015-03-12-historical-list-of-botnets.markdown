@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Historical list of botnets"
-excerpt:  "List of the main botnets created along the history"
+excerpt:  "List of the main botnets created along the history."
 date:   2015-12-03 10:00:00
 categories: history
 ---

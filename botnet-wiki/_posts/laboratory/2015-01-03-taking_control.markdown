@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Build and Distribute"
-date:   2015-10-19 17:21:50
+date:   2015-10-01 17:21:50
 categories: laboratory
 excerpt: Adding the bot to startup and generation executables.
 ---

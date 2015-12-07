@@ -3,6 +3,7 @@ layout: post
 title:  "How Bots and Botnets work"
 date:   2015-01-30 10:21:50
 categories: anatomy
+excerpt: Detailed explaination on how bots spread and how they are controlled by their masters.
 ---
 
 This section will in detail explain how bots spread and how they are controlled by their masters.

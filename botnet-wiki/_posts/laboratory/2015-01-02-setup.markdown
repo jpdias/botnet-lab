@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setup Botnet Lab"
-date:   2015-10-19 17:21:50
+date:   2015-10-02 17:21:50
 categories: laboratory
 excerpt: Setup guide for botnet laboratory.
 ---

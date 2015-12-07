@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Botnet Lab Architecture"
-date:   2015-10-19 17:21:50
+date:   2015-10-03 17:21:50
 categories: laboratory
 excerpt: Architecture and structure of the botnet laboratory.
 ---
@@ -38,7 +38,7 @@ Also, it's used RSA encryption so the *Bot Herder* it's the only one capable of 
 
 ##Message Exchange Diagram on Webcam or Screenlogger Request
 
-![Sequencial Diagram]({{ site.url }}/diagrams/sequencial_spam_diagram.png)
+![Sequencial Diagram]({{ site.url }}/diagrams/sequencial_webcam_diagram.png)
 
 ##Host Location Call Diagram
 

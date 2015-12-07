@@ -3,6 +3,7 @@ layout: post
 title:  "Good Uses for Botnets"
 date:   2015-01-01 10:21:50
 categories: history
+excerpt: "There are plenty of good examples of uses for botnets, besides the malicious ones."
 ---
 
 Botnets in general, and in most cases, are used in a destructive and harmful way, being so that it considered to be a malware.

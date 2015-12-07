@@ -180,3 +180,7 @@ footer p {
 		text-align:center
 	}
 }
+
+.panel-body{
+	height:100px
+}
