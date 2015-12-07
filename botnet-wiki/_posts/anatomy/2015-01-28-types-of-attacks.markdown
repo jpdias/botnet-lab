@@ -13,7 +13,7 @@ A botnet is nothing more than a tool, there are as many different motives for us
 
 1.	**Distributed Denial-of-Service Attacks** 
 
-	Often botnets are used for Distributed Denial-of-Service (DDoS[1]) attacks. A DDoS attack is an attack on a computer system or network that causes a loss of service to users, typically the loss of network connectivity and services by consuming the bandwidth of the victim network or overloading the computational resources of the victim system. In addition, the resources on the path are exhausted if the DDoS-attack causes many packets per second (pps). Most commonly implemented and also very often used are TCP SYN and UDP flood attacks. 
+	Often botnets are used for Distributed Denial-of-Service (DDoS`[1]`) attacks. A DDoS attack is an attack on a computer system or network that causes a loss of service to users, typically the loss of network connectivity and services by consuming the bandwidth of the victim network or overloading the computational resources of the victim system. In addition, the resources on the path are exhausted if the DDoS-attack causes many packets per second (pps). Most commonly implemented and also very often used are TCP SYN and UDP flood attacks. 
 	
 	![Attack Type DDoS Diagram]({{ site.url }}/assets/ddos.png)
 	
@@ -23,7 +23,7 @@ A botnet is nothing more than a tool, there are as many different motives for us
 
 2.	**Spamming**
 
-	Some bots offer the possibility to open a SOCKS v4/v5 proxy - a generic proxy protocol for TCP/IP-based networking applications (RFC 1928[2]) - on a compromised machine. After having enabled the SOCKS proxy, this machine can then be used for nefarious tasks such as spamming. With the help of a botnet and thousands of bots, an attacker is able to send massive amounts of bulk email (spam). Some bots also implement a special function to harvest email-addresses. Often that spam you are receiving was sent from, or proxied through, old Windows computers sitting at home. In addition, this can, of course, also be used to send phishing-mails since phishing is a special case of spam.
+	Some bots offer the possibility to open a SOCKS v4/v5 proxy - a generic proxy protocol for TCP/IP-based networking applications (RFC 1928`[2]`) - on a compromised machine. After having enabled the SOCKS proxy, this machine can then be used for nefarious tasks such as spamming. With the help of a botnet and thousands of bots, an attacker is able to send massive amounts of bulk email (spam). Some bots also implement a special function to harvest email-addresses. Often that spam you are receiving was sent from, or proxied through, old Windows computers sitting at home. In addition, this can, of course, also be used to send phishing-mails since phishing is a special case of spam.
 	
 	*Reference*: [RFC 1928](http://rfc.net/rfc1928.html)[2]
 
@@ -42,7 +42,7 @@ A botnet is nothing more than a tool, there are as many different motives for us
 
 	In most cases, botnets are used to spread new bots. This is very easy since all bots implement mechanisms to download and execute a file via HTTP or FTP. But spreading an email virus using a botnet is a very nice idea too. A botnet with 10.000 hosts which acts as the start base for the mail virus allows very fast spreading and thus causes more harm. The Witty worm, which attacked the ICQ protocol parsing implementation in Internet Security Systems (ISS) products is suspected to have been initially launched by a botnet due to the fact that the attacking hosts were not running any ISS services.
 
-6.	**Installing Advertisement Addons and Browser Helper Objects (BHOs[3])**
+6.	**Installing Advertisement Addons and Browser Helper Objects (BHOs`[3]`)**
 
 	Botnets can also be used to gain financial advantages. This works by setting up a fake website with some advertisements: The operator of this website negotiates a deal with some hosting companies that pay for clicks on ads. With the help of a botnet, these clicks can be "automated" so that instantly a few thousand bots click on the pop-ups. This process can be further enhanced if the bot hijacks the start-page of a compromised machine so that the "clicks" are executed each time the victim uses the browser.
 	
@@ -50,7 +50,7 @@ A botnet is nothing more than a tool, there are as many different motives for us
 	
 7.	**Google AdSense abuse**
 	
-	A similar abuse is also possible with Google's AdSense[4] program: AdSense offers companies the possibility to display Google advertisements on their own website and earn money this way. The company earns money due to clicks on these ads, for example per 10.000 clicks in one month. An attacker can abuse this program by leveraging his botnet to click on these advertisements in an automated fashion and thus artificially increments the click counter. This kind of usage for botnets is relatively uncommon, but not a bad idea from an attacker's perspective.
+	A similar abuse is also possible with Google's AdSense`[4]` program: AdSense offers companies the possibility to display Google advertisements on their own website and earn money this way. The company earns money due to clicks on these ads, for example per 10.000 clicks in one month. An attacker can abuse this program by leveraging his botnet to click on these advertisements in an automated fashion and thus artificially increments the click counter. This kind of usage for botnets is relatively uncommon, but not a bad idea from an attacker's perspective.
 	
 	*Reference*: [AdSense](https://www.google.com/adsense/)[4]
 
