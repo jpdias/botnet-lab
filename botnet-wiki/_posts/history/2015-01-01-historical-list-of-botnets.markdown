@@ -1,12 +1,8 @@
 ---
 layout: post
 title:  "Historical list of botnets"
-<<<<<<< HEAD:botnet-wiki/_posts/history/2015-03-12-historical-list-of-botnets.markdown
 excerpt:  "List of the main botnets created along the history"
 date:   2015-12-03 10:00:00
-=======
-date:   2015-01-30 10:00:00
->>>>>>> 7fe1e708ef3410f1f6e11c5105f2b78b1e466e9a:botnet-wiki/_posts/history/2015-01-01-historical-list-of-botnets.markdown
 categories: history
 ---
 
@@ -174,7 +170,7 @@ The Nitol botnet is a botnet mostly involved in spreading malware and distribute
 ----------
 
 
-**Semalt (aka Soundfrost)**
+**Semalt (aka Soundfrost)** [more info](http://blog.nabble.nl/post/93407897762/semalt-soundfrost-caught-spying)
 
 Est. no of bots: 300 000+
 

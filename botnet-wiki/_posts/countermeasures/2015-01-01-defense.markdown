@@ -1,5 +1,15 @@
+---
+layout: post
+title:  "Botnet countermeasures"
+excerpt:  ""
+date:   2015-12-03 10:00:00
+categories: defense
+---
+
+
 Botnet Detection
 ===================
+
 
 **Botnet detection** deals with the identification of bots in the machine or network so that some sort of remedy can be done. 
 
