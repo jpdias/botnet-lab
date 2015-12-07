@@ -3,7 +3,7 @@ layout: post
 title:  "Botnet countermeasures"
 excerpt:  "Main defenses and countermeasures agains botnets"
 date:   2015-12-03 10:00:00
-categories: defense
+categories: countermeasures
 ---
 
 
