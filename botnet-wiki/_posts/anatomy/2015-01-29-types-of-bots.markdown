@@ -3,6 +3,7 @@ layout: post
 title:  "Types of Bots"
 date:   2015-01-29 21:21:50
 categories: anatomy
+excerpt: Here we present some of the more widespread and well-known bots.
 ---
 
 During our research, we found many different types of bots. Here we present some of the more widespread and well-known bots. We introduce the basic concepts of each piece of malware and furthermore describe some of the features in more detail. In addition, we show several examples of source code from bots and list parts of their command set.

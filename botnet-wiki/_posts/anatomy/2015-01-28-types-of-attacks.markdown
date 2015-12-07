@@ -3,6 +3,7 @@ layout: post
 title:  "Types of Attacks"
 date:   2015-01-28 10:21:50
 categories: anatomy
+excerpt: A botnet is nothing more than a tool, there are as many different motives for using.
 ---
 
 A botnet is nothing more than a tool, there are as many different motives for using. The most common uses are criminally motivated or for destructive purposes. The possibilities to use botnets can be categorized as listed below. And since `a botnet is nothing more than a tool`, there are most likely other potential uses that we have not listed.
