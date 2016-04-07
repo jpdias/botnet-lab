@@ -53,14 +53,18 @@ class ChatBridge(irc.IRCClient):
 
     def userlist(self):
         try:
-            baseUrl = "http://freegeoip.net/json/"
-    
-            baseMap = """https://maps.googleapis.com/maps/api/staticmap?center=Portugal&zoom=2&size=1300x1300"""
+            ##baseUrl = "https://freegeoip.lwan.ws/json/"
+            baseUrl = "http://geoip.nekudo.com/api/"
+            baseMap = """https://maps.googleapis.com/maps/api/staticmap?center=Portugal&zoom=2&size=1800x2400"""
             for host in self.HostList:
-                j1 = requests.get(baseUrl + host)
+                import socket
+                addr = socket.gethostbyname(host)
+                print addr
+                j1 = requests.get(baseUrl + addr)
                 resp = json.loads(j1.text)
-                baseMap += "&markers=color:red%7Clabel:S%7C" + str(resp["latitude"]) + "," + str(resp["longitude"])
-    
+                print resp
+                baseMap += "&markers=color:red%7Clabel:S%7C" + str(resp["location"]["latitude"]) + "," + str(resp["location"]["longitude"])
+
             baseMap += "&key=AIzaSyBAsLov4ueoDpIddLVkwdeUprbLdUgmJtc"
         except:
             return "API not available."
