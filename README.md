@@ -1,6 +1,6 @@
 # *Botnet Lab*
 
-##Summary
+## Summary
 
 The botnet built using this laboratory will match the general architecture for any botnet based on a Command-and-Control (C&C) architecture.
 Our actor is the *Bot Herder* or *Bot Master*, it operates using the a special IRC client (that is part of this laboratory), connects to a IRC-Server (in this case a IRCD-Hybrid based one) where all the bots are connected.
@@ -19,15 +19,15 @@ Adding to all of this, it is used the [freegeoip](https://freegeoip.net/) and [G
 Also, it's used RSA encryption so the *Bot Herder* it's the only one capable of decrypt the messages sended by the bots because it's the *Private Key* owner. The bots encrypts the messages using the *Public Key* defined by the *Bot Herder*.
 
 
-##*Botnet Lab* setup
+## *Botnet Lab* setup
 
-###Minimal requirements
+### Minimal requirements
 
-####Operative System
+#### Operative System
 
 Any Windows or Linux system will be capable of building and running the project.
 
-####Dependencies
+#### Dependencies
 
 - [Python 2.7.x](https://www.python.org/downloads/)
 - [pip 7.x.x]()
@@ -39,23 +39,23 @@ Any Windows or Linux system will be capable of building and running the project.
 - [git](https://git-scm.com/)
 	- [Install instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 	
-##Setup guide
+## Setup guide
 
 Almost everyone of this steps are commands.
 
-####Cloning the repository
+#### Cloning the repository
 
 - `git clone https://github.com/jpdias/botnet-lab.git`
 - `cd botnet-lab/botnet-lab`
 
-####Setting up the virtual environment
+#### Setting up the virtual environment
 
 - `virtualenv venv`
 - Starting the created virtual envoirnemnt
 	- Linux: `. venv/bin/activate`
 	- Windows: `venv\scripts\activate` 
 	
-###Installing project dependencies
+### Installing project dependencies
 
 - `pip install -r requirements.txt`
 	 - This probably will fail at some point, because some of the used librarys are no longer supported or they stoped the development.
