@@ -1,5 +1,7 @@
 # *Botnet Lab*
 
+[![DOI](https://zenodo.org/badge/doi/10.5220/0006392404630469.svg)](http://dx.doi.org/10.5220/0006392404630469)
+
 ## Summary
 
 The botnet built using this laboratory will match the general architecture for any botnet based on a Command-and-Control (C&C) architecture.
