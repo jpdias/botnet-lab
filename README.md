@@ -1,6 +1,6 @@
 # *Botnet Lab*
 
-[![DOI](https://zenodo.org/badge/doi/10.5220/0006392404630469.svg)](http://dx.doi.org/10.5220/0006392404630469)
+[![DOI](https://zenodo.org/badge/doi/10.5220/0006392404630469.svg)](http://dx.doi.org/10.5220/0006392404630469)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Summary
 
