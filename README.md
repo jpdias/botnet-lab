@@ -1,6 +1,30 @@
 # *Botnet Lab*
 
-[![DOI](https://zenodo.org/badge/doi/10.5220/0006392404630469.svg)](http://dx.doi.org/10.5220/0006392404630469)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/doi/10.5220/0006392404630469.svg)](http://dx.doi.org/10.5220/0006392404630469) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Notice: Unmaintained
+
+This project was originally built for bootstraping botnet-like systems in a understandable way (focusing on a learning-only perspective). However, since then other open-source projects have appear with similar propose, thus this repository is no longer maintained. Some of the best alternatives are:
+- [BYOB - Build Your Own Botnet](https://github.com/malwaredllc/byob)
+- [UBoat HTTP](https://github.com/UBoat-Botnet/UBoat)
+
+If you want something more real-world like:
+- [Mirai](https://github.com/lejolly/mirai)
+- [botnet-hackpack](https://github.com/TreeHacks/botnet-hackpack)
+
+## Citing this Work
+
+	@conference{wicspit17,
+	  author={João Pedro Dias. and José Pedro Pinto. and José Magalhães Cruz.},
+	  title={A Hands-on Approach on Botnets for Behavior Exploration},
+	  booktitle={Proceedings of the 2nd International Conference on Internet of Things, Big Data and Security - Volume 1: WICSPIT,},
+	  year={2017},
+	  pages={463-469},
+	  publisher={SciTePress},
+	  organization={INSTICC},
+	  doi={10.5220/0006392404630469},
+	  isbn={978-989-758-245-5},
+	}
 
 ## Summary
 
